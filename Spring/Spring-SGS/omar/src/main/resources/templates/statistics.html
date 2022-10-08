@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table >
+    <thead>
+    <tr>
+        <th>AVG</th>
+        <th></th>
+        <th></th>
+        <th>Median</th>
+        <th></th>
+        <th></th>
+        <th>Max</th>
+        <th></th>
+        <th></th>
+        <th>Min</th>
+    </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td th:text="${statistics.get(0)}"></td>
+        <td> </td>
+        <td></td>
+         <td th:text="${statistics.get(1)}"></td>
+         <td> </td>
+         <td></td>
+         <td th:text="${statistics.get(2)}"></td>
+         <td> </td>
+         <td></td>
+         <td th:text="${statistics.get(3)}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table >
+    <thead>
+    <tr>
+
+        <th>Course Name</th>
+        <th>|</th>
+        <th>|</th>
+        <th>your Mark</th>
+        <th>|</th>
+        <th>|</th>
+        <th>statistics</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each=" sc : ${studentCourses}">
+        <td th:text="${sc.courseName}"></td>
+        <td>|</td>
+        <td>|</td>
+        <td th:text="${sc.mark}"></td>
+        <td>|</td>
+        <td>|</td>
+        <td>
+            <form  th:action="@{/statistics}"  method="post">
+                <input type="hidden" name="courseName" th:value="${sc.courseName}">
+                <button type="submit">Show statistics of the course</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
